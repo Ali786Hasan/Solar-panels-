@@ -1,0 +1,7 @@
+{
+  "name": "SolarGrowth - Investment Platform",
+  "description": "A high-performance investment and mining platform clone with dark mode UI, multi-level referral tracking, and integrated payment flows.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
