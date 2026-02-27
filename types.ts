@@ -12,20 +12,38 @@ export interface Product {
 export interface User {
   balance: number;
   totalIncome: number;
+  uncollectedIncome: number;
   phone: string;
   password?: string;
+  transactionPin?: string;
   referralCode: string;
+  referredBy?: string;
   teamSize: number;
+  teamIncome: number;
+  lastCheckIn?: string;
+  vipLevel: number;
   orders: Order[];
   rechargeHistory: RechargeRecord[];
   withdrawalHistory: WithdrawalRecord[];
+  transactions: TransactionRecord[];
+  notifications: Notification[];
   isAdmin?: boolean;
+}
+
+export interface TransactionRecord {
+  id: string;
+  type: 'Income' | 'Recharge' | 'Withdrawal' | 'Bonus' | 'Purchase' | 'Spin';
+  amount: number;
+  date: string;
+  status: 'Success' | 'Pending' | 'Failed';
+  description: string;
 }
 
 export interface Order {
   id: string;
   productId: number;
   purchaseDate: string;
+  lastCollectionDate: string;
   status: 'Active' | 'Completed';
 }
 
@@ -49,4 +67,13 @@ export interface WithdrawalRecord {
   status: 'Pending' | 'Success' | 'Failed';
 }
 
-export type Page = 'home' | 'order' | 'team' | 'mine' | 'deposit' | 'recharge_select' | 'recharge_history' | 'support' | 'admin' | 'withdrawal' | 'withdrawal_history' | 'help' | 'settings';
+export interface Notification {
+  id: string;
+  title: string;
+  message: string;
+  date: string;
+  read: boolean;
+  type: 'recharge' | 'withdrawal' | 'system';
+}
+
+export type Page = 'home' | 'order' | 'team' | 'mine' | 'deposit' | 'recharge_select' | 'recharge_history' | 'support' | 'admin' | 'withdrawal' | 'withdrawal_history' | 'help' | 'settings' | 'task' | 'spin' | 'login' | 'register' | 'notifications';

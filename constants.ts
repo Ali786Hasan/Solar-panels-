@@ -9,7 +9,7 @@ export const PRODUCTS: Product[] = [
     totalIncome: 10000, 
     validity: 100, 
     category: 'Solar',
-    image: 'https://images.unsplash.com/photo-1509391366360-fe5bb58485bb?auto=format&fit=crop&q=80&w=400'
+    image: 'https://picsum.photos/seed/solar1/400/300'
   },
   { 
     id: 2, 
@@ -19,7 +19,7 @@ export const PRODUCTS: Product[] = [
     totalIncome: 21000, 
     validity: 100, 
     category: 'Solar',
-    image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=400'
+    image: 'https://picsum.photos/seed/solar2/400/300'
   },
   { 
     id: 3, 
@@ -29,7 +29,7 @@ export const PRODUCTS: Product[] = [
     totalIncome: 55000, 
     validity: 100, 
     category: 'Solar',
-    image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&q=80&w=400'
+    image: 'https://picsum.photos/seed/solar3/400/300'
   },
   { 
     id: 4, 
@@ -39,7 +39,7 @@ export const PRODUCTS: Product[] = [
     totalIncome: 120000, 
     validity: 100, 
     category: 'Solar',
-    image: 'https://images.unsplash.com/photo-1548337138-e87d889cc98b?auto=format&fit=crop&q=80&w=400'
+    image: 'https://picsum.photos/seed/solar4/400/300'
   },
   { 
     id: 5, 
@@ -49,7 +49,7 @@ export const PRODUCTS: Product[] = [
     totalIncome: 260000, 
     validity: 100, 
     category: 'Solar',
-    image: 'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&q=80&w=400'
+    image: 'https://picsum.photos/seed/solar5/400/300'
   },
   { 
     id: 6, 
@@ -59,7 +59,7 @@ export const PRODUCTS: Product[] = [
     totalIncome: 16000, 
     validity: 100, 
     category: 'Wind',
-    image: 'https://images.unsplash.com/photo-1466611653911-95282fc3656b?auto=format&fit=crop&q=80&w=400'
+    image: 'https://picsum.photos/seed/wind1/400/300'
   },
   { 
     id: 7, 
@@ -69,19 +69,25 @@ export const PRODUCTS: Product[] = [
     totalIncome: 38000, 
     validity: 100, 
     category: 'Wind',
-    image: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&q=80&w=400'
+    image: 'https://picsum.photos/seed/wind2/400/300'
   },
 ];
 
 export const INITIAL_USER: User = {
-  balance: 310,
+  balance: 0,
   totalIncome: 0,
-  phone: '+88 01719359646',
+  uncollectedIncome: 0,
+  phone: '01601359646',
   password: 'password123',
+  transactionPin: '1234',
   referralCode: '764740',
-  teamSize: 12,
+  teamSize: 0,
+  teamIncome: 0,
+  vipLevel: 1,
   orders: [],
   rechargeHistory: [],
   withdrawalHistory: [],
+  transactions: [],
+  notifications: [],
   isAdmin: true 
 };
